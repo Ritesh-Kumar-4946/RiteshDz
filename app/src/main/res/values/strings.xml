@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Dz</string>
+    <string name="splash_image">Splash Image</string>
+    <string name="app_tittle_login_select">Your Product is a few minutes away.</string>
+    <string name="signup">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="text_or">Or</string>
+    <string name="text_as_guest">----- As Guest -----</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name ="facebook_app_id">1968154533470090</string>
+    <string name="login_facebook">Login With Facebook</string>
+    <string name="login_email_user">Email Address</string>
+    <string name="login_password">Password</string>
+    <string name="user_name">User Name</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="user_first_name">User First Name</string>
+    <string name="user_last_name">User Last Name</string>
+    <string name="terms_conditions">By signing with DZ you agree to our</string>
+    <string name="terms">terms and conditions.</string>
+    <string name="or_signup_with_social">or sign up with</string>
+    <string name="tv_driver_time">Your Caption is 1 minute away</string>
+    <string name="tv_driver_distance">1 Km</string>
+    <string name="tv_add_drop_location">Add a dropoff location</string>
+    <string name="spinner_hint">Select User Type</string>
+    <string name="tv_product_name">Product Name</string>
+    <string name="tv_product_detail">Detail</string>
+    <string name="tv_product_code">Code</string>
+
+
+
+    <string name="label_send">Send</string>
+    <string name="label_error_incorrect_phone">Incorrect phone</string>
+    <string name="tv_pickup_location">Pickup Location</string>
+    <string name="tv_continue">Go With this location</string>
+
+
+
+
+    <string name="please_wait_facebooklogin">Please Waite Facebook Login</string>
+    <string name="login_canceled_facebooklogin">Login Canceled</string>
+    <string name="login_failed_facebooklogin">Login Failed</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="dr_tv_pickup_location">Pickup Location</string>
+    <string name="tv_your_product">Your Product</string>
+    <string name="tv_payment">Payment</string>
+    <string name="dr_tv_user_email">User Email Address</string>
+    <string name="dr_tv_transfer_location_location">Transfer from Location to Location</string>
+    <string name="tv_other_location">Other Location</string>
+    <string name="dr_tv_home">Home</string>
+    <string name="dr_tv_my_product">My Product</string>
+    <string name="dr_tv_wallet">Wallet</string>
+    <string name="dr_tv_get_free_product">Get Free Product</string>
+    <string name="dr_tv_setting">Setting</string>
+    <string name="dr_tv_call_us">Call us</string>
+    <string name="dr_tv_help">Help</string>
+    <string name="dr_tv_logout">Logout</string>
+
+
+
+</resources>

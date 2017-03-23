@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_product_pickup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:elevation="7dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Your Product"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_product_pickup">
+
+
+        <FrameLayout
+            android:id="@+id/containerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_mylocation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@drawable/map_ic_my_location" />
+
+                <ImageView
+                    android:id="@+id/iv_myimage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/iv_mylocation"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/map_ic_image" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_map_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_marker_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_marker"
+                            android:layout_width="25dp"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="57dp"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:background="@drawable/map_ic_marker" />
+
+                        <ImageView
+                            android:id="@+id/iv_marker_shadow"
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="-15dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_toEndOf="@id/iv_marker"
+                            android:layout_toRightOf="@id/iv_marker"
+                            android:background="@drawable/ic_marker_shadoww" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_map_main">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cv_driver_distance_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/rl_driver_time_distance_color_bg"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="4dp"
+                            app:cardMaxElevation="4dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_driver_time_distance"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/tv_driver_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/tv_driver_time"
+                                    android:textColor="@color/white_clr"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_driver_distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/tv_driver_distance"
+                                    android:textColor="@color/white_clr"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+
+                        </android.support.v7.widget.CardView>
+
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cv_driver_pickup_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/cv_driver_distance_time"
+                            android:layout_marginTop="5dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white_clr"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="4dp"
+                            app:cardMaxElevation="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_driver_pickup_location"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:paddingBottom="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp">
+
+                                    <ImageView
+                                        android:id="@+id/iv_driver_location_icon"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@drawable/ic_driver_setlocation" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/rl_driver_pickup_location">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/tv_add_drop_location"
+                                        android:textSize="15sp" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cv_driver_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/cv_driver_pickup_location"
+                            android:layout_marginTop="5dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white_clr"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="4dp"
+                            app:cardMaxElevation="4dp">
+
+                            <android.support.percent.PercentRelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_driver_image_rate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginEnd="1dp"
+                                    app:layout_heightPercent="100%"
+                                    app:layout_widthPercent="50%">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_dr_header"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="100dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_profiel_imageview"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp">
+
+                                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/profile_main_image"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:background="@drawable/the_app_guru"
+                                                android:src="@drawable/the_app_guru"
+                                                app:civ_border_color="#FFFFFFFF"
+                                                app:civ_border_width="2dp" />
+
+                                            <RelativeLayout
+                                                android:id="@+id/rl_profile_main_progressbar"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:visibility="gone">
+
+                                                <ProgressBar
+                                                    android:id="@+id/profile_main_progressbar"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:indeterminate="false"
+                                                    android:max="100"
+                                                    android:progressDrawable="@drawable/circular_progress_bar" />
+
+                                            </RelativeLayout>
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_user_detail_text"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/rl_profiel_imageview"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginTop="10dp">
+
+                                            <TextView
+                                                android:id="@+id/tv_user_progile_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerHorizontal="true"
+                                                android:ems="3"
+                                                android:maxLines="2"
+                                                android:text="@string/driver_name"
+                                                android:textSize="18sp" />
+
+                                        </RelativeLayout>
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@android:color/darker_gray" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_product_detail"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_toRightOf="@id/rl_driver_image_rate"
+                                    app:layout_heightPercent="100%"
+                                    app:layout_widthPercent="50%">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/tv_product_name"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:text="@string/tv_product_name"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_product_detail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tv_product_name"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:text="@string/tv_product_detail"
+                                            android:textSize="18sp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_product_code"
+                                            android:layout_width="100dp"
+                                            android:layout_height="40dp"
+                                            android:layout_below="@id/tv_product_detail"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:background="@drawable/tv_product_boarder"
+                                            android:gravity="center"
+                                            android:text="@string/tv_product_code"
+                                            android:textSize="18sp" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </android.support.percent.PercentRelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cv_driver_call_options"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@id/cv_driver_information"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="0dp"
+                            app:cardElevation="4dp"
+                            app:cardMaxElevation="4dp">
+
+                            <android.support.percent.PercentRelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_driver_call_option"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginEnd="1dp"
+                                    app:layout_heightPercent="100%"
+                                    app:layout_widthPercent="50%">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_driver_calll"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="Driver Call Options" />
+
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@android:color/darker_gray" />
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_driver_share_tracker"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginEnd="1dp"
+                                    app:layout_heightPercent="100%"
+                                    app:layout_widthPercent="50%">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_driver_share_trackerr"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="Share Tracker" />
+
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+
+
+                            </android.support.percent.PercentRelativeLayout>
+
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </RelativeLayout>
+
+
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dz.ritesh">
+
+
+    <permission
+        android:name="com.dz.ritesh.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.dz.ritesh.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/SplashTheme"
+        android:windowSoftInputMode="stateHidden">
+
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SignInSignUpSelectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".SignInActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Pickup_Location_Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Transfer_location_location"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Your_Product"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".SignUpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Product_Pickup_Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <!-- Goolge Maps API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBllTrngA86LRSx0_o5Du8MNFUKQ_kRMIE" />
+
+    </application>
+
+
+</manifest>

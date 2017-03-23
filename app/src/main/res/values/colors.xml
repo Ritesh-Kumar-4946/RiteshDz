@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02a899</color>
+    <color name="colorPrimaryDark">#03786d</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="semi_transparent_white">#4DFFFFFF</color>
+    <color name="snackbar_semitransparent">#4DB94983</color>
+    <color name="white_clr">#FFFFFFFF</color>
+    <color name="black_clr">#FF000000</color>
+    <color name="login_facebook_clr">#3D5A98</color>
+    <color name="blue_dark">#1a346c</color>
+    <color name="login_email">#FF02A899</color>
+    <color name="login_facebook_focus">#5577bd</color>
+    <color name="or_line">#aeaeae</color>
+    <color name="text_color_hint">#a3a3a3</color>
+    <color name="rl_driver_time_distance_color_bg">#4e4c4c</color>
+    <color name="pink">#ff005e</color>
+    <color name="pinkDark">#b90044</color>
+    <color name="blue">#FF005393</color>
+    <color name="blueDark">#0283e6</color>
+
+
+    <!--google type progress bar color (Start)-->
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+        <item>@color/gplus_color_5</item>
+
+    </integer-array>
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#FF4081</color>
+    <color name="gplus_color_5">#b23424</color>
+    <!--google type progress bar color (End)-->
+
+
+</resources>
